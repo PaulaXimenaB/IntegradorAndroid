@@ -13,12 +13,22 @@
         <action
             android:id="@+id/action_categoryFragment_to_pastimeFragment"
             app:destination="@id/pastimeFragment" />
+        <argument
+            android:name="participants"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/pastimeFragment"
         android:name="com.example.integradorandroid.PastimeFragment"
         android:label="Activities"
-        tools:layout="@layout/fragment_pastime" />
+        tools:layout="@layout/fragment_pastime" >
+        <argument
+            android:name="participants"
+            app:argType="integer" />
+        <argument
+            android:name="category"
+            app:argType="string" />
+    </fragment>
     <fragment
         android:id="@+id/termsFragment"
         android:name="com.example.integradorandroid.TermsFragment"

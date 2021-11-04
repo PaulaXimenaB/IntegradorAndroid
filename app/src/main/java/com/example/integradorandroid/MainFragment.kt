@@ -16,7 +16,10 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         binding = FragmentMainBinding.bind(view)
 
         binding.btnStart.setOnClickListener{
-            findNavController().navigate(R.id.action_mainFragment_to_categoryFragment)
+            val action = MainFragmentDirections.actionMainFragmentToCategoryFragment(
+                binding.etParticipants.text.toString().toInt()
+            )
+            findNavController().navigate(action)
         }
         binding.tvTerms.setOnClickListener{
             findNavController().navigate(R.id.action_mainFragment_to_termsFragment)
