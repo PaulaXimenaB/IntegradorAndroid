@@ -54,5 +54,8 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.9.0' // romper el uso de http, lo consume
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0' // permite converit archivos jason para ser entendibles
 
+    //corutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.3'
+
 
 }
