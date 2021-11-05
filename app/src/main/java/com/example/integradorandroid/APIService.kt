@@ -13,13 +13,13 @@ interface APIService {
     suspend fun getPastime(@Url url:String):Response<PasTime>*/
 
      @GET ("activity?")
-    suspend fun getPastime(@Query("participants") participants: Int, @Query("type")category : String):Call<PasTime>
+    suspend fun getPastime(@Query("participants") participants: Int, @Query("type")category : String):Response<PasTime>
    /* @GET("activity?")
     fun getActivityDetaill(
         @Query("type",encoded = true) type: String,
         @Query("participants",encoded = true) participants: String
 
     ): Call<DetailModel>*/
-    @GET
-    suspend fun getRandomPastime(participants : Int) : Response<PasTime>
+    @GET("activity?")
+    suspend fun getRandomPastime(@Query("participants")participants : Int) : Response<PasTime>
 }
